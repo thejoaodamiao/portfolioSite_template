@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../estilo/style.css">
+    <link rel="image icon" href="../imagens/icons8_monkey_50px_5.png">
+    <title>Homo Sapiens Developer</title>
+</head>
+
+<body>
+    <section class="banner" id="sec">
+        <header>
+            <a href="#" class="logo">
+                <img id="logocaco" src="../imagens/icons8_monkey_100px_1.png" alt=""> </a>
+            <div id="toggle" onclick="toggle()"></div>
+        </header>
+        <div class="content">
+            <h2>Hello World,<br>We're <span> Homo Sapiens devs</span></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ultrices, enim non lacinia blandit, eros dui tempus nisl, a vehicula enim neque vitae neque. Vestibulum nulla turpis, convallis vel augue non, facilisis sodales tellus. Suspendisse
+                et blandit sapien. Aliquam nec turpis id dolor vehicula efficitur. Donec a urna id nulla gravida auctor.</p>
+            <a href="#">Know More</a>
+        </div>
+        <ul class="sci">
+            <li>
+                <a href="https://www.facebook.com/HomoSapiens-Developer-100377921766972"><img src="../imagens/facebook.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/homosapiensdeveloper/"><img src="../imagens/insta.png" alt=""></a>
+            </li>
+            <li>
+                <a href="https://github.com/HomosapiensDev/"><img src="../imagens/git.png" alt=""></a>
+            </li>
+        </ul>
+    </section>
+    <div id="navegation">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+    <br>
+    <div>
+        <h2 id="titulo">
+            Ultimos lançamentos
+        </h2>
+    </div>
+    <script type="text/javascript">
+        function toggle() {
+            var sec = document.getElementById('sec');
+            var nav = document.getElementById('navegation');
+            sec.classList.toggle('active');
+            nav.classList.toggle('active');
+        }
+    </script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="/__/firebase/8.4.1/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <!-- Initialize Firebase -->
+    <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>

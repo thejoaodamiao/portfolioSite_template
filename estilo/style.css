@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,700,800,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    background: #111;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 70px;
+    z-index: 100000;
+    transition: 0.5s;
+}
+
+header #logocaco {
+    position: relative;
+    width: 80px;
+    height: 80px;
+    top: -30px;
+    left: 25px;
+    transition: 0.5s;
+}
+
+header #toggle {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+header #toggle::before {
+    content: '';
+    position: absolute;
+    top: 7px;
+    width: 100%;
+    height: 10%;
+    background: #fff;
+    transition: .5s;
+    border-radius: 20px;
+}
+
+header #toggle::after {
+    content: '';
+    position: absolute;
+    bottom: 7px;
+    left: 18px;
+    width: 40%;
+    height: 10%;
+    background: #fff;
+    transition: .5s;
+    border-radius: 20px;
+}
+
+.banner.active header #toggle::before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.banner.active header #toggle::after {
+    width: 100%;
+    height: 10%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.banner {
+    position: relative;
+    width: 100%;
+    min-height: 90vh;
+    padding: 100px;
+    background: url('../imagens/bg.png');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+.banner .active {
+    transform: translateX(-400px);
+}
+
+#navegation {
+    position: fixed;
+    top: 0;
+    right: -400px;
+    width: 400px;
+    height: 90vh;
+    background: rgb(255, 217, 4);
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    transition: 0.5s;
+}
+
+#navegation.active {
+    right: 0;
+}
+
+#navegation ul {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+#navegation ul li {
+    list-style: none;
+}
+
+#navegation ul li a {
+    color: #fff;
+    display: inline-block;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 0 15px;
+    text-transform: uppercase;
+}
+
+#navegation ul li a:hover {
+    background-color: #5061c4;
+}
+
+.content {
+    max-width: 500px;
+}
+
+.content h2 {
+    color: #fff;
+    font-size: 2.0em;
+}
+
+.content h2 span {
+    color: rgb(255, 217, 4);
+    font-size: 1.1em;
+}
+
+.content p {
+    font-size: 1em;
+    font-weight: 300;
+    color: white;
+}
+
+.content a {
+    position: relative;
+    display: inline-block;
+    margin-top: 20px;
+    background: #fff;
+    color: #000;
+    padding: 10px 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.content a:hover {
+    transform: translateY(-6px);
+}
+
+.sci {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+}
+
+.sci li {
+    list-style: none;
+}
+
+.sci li a {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 50px;
+    height: 50px;
+    border: 1px solid #fff;
+    margin: 10px 0 0;
+}
+
+.sci li a:hover {
+    background: #fff;
+}
+
+.sci li a img {
+    max-width: 30px;
+    filter: invert(1);
+    mix-blend-mode: difference;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    width: 875px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: 30%;
+    align-items: right;
+    flex-wrap: wrap;
+    border-radius: 4px;
+    background: rgba(54, 54, 54, 0.5);
+}
+
+#titulo {
+    display: flex;
+    color: white;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    left: -9%;
+}
+
+.container .box {
+    position: relative;
+    width: 150px;
+    height: 230px;
+    color: white;
+    background: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 10px;
+    transition: 0.5s;
+    border-radius: 4px;
+}
+
+.container .box:hover {
+    transform: translateY(-20px);
+}
+
+.container .box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+}
+
+.container .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffbc00, #ff0058);
+    filter: blur(15px);
+}
+
+.container .box:nth-child(2):before,
+.container .box:nth-child(2):after {
+    background: linear-gradient(315deg, #03a9f4, #ff0058);
+}
+
+.container .box:nth-child(3):before,
+.container .box:nth-child(3):after {
+    background: linear-gradient(315deg, #4dff03, #00d0ff);
+}
+
+.container .box .content {
+    position: absolute;
+    z-index: 10;
+    left: 0;
+    bottom: 0;
+    padding: 10px 10px;
+}
+
+.container .box .content a {
+    border: 1px solid white;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.8);
+    display: inline-block;
+    font-size: 10px;
+    color: white;
+    background-color: rgb(48, 48, 48);
+    padding: 10px;
+    font-weight: 700;
+    z-index: 9;
+}
+
+.box .imgm {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 8;
+}
+
+.box .imgm img {
+    max-width: 100%;
+    height: 100%;
+}
+
+.box .imgm img:hover {
+    opacity: 1;
+}
+
+@media (max-width: 767px) {
+    header {
+        padding: 30px 50px;
+    }
+    .banner {
+        padding: 100px 50px 150px;
+    }
+    .banner h2 {
+        font-size: 1.8em;
+    }
+    .banner p,
+    .banner a .content {
+        font-size: 0.9em;
+    }
+    .banner.active {
+        transform: translateX(-250px);
+    }
+    header #logocaco {
+        top: -8px;
+        left: -10px;
+        width: 40px;
+        height: 40px;
+    }
+    #navegation {
+        width: 250px;
+        height: 100vh;
+    }
+    #navegation ul li a {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+    .sci {
+        position: absolute;
+        bottom: 50px;
+        right: initial;
+        flex-direction: row;
+    }
+    .sci li a {
+        margin: initial;
+        margin-right: 20px;
+    }
+}
